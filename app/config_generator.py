@@ -9,8 +9,10 @@ class ConfigGenerator:
         self.tls_crypt_key = tls_crypt_key
 
     def generate_config(self, client_name, server_ip):
+        # Генерация ключей и сертификатов
         self._generate_certificates(client_name)
 
+        # Создание конфига
         config_path = os.path.join(self.config_dir, f"{client_name}.ovpn")
         with open(self.template_path, "r") as template_file:
             config_content = template_file.read()

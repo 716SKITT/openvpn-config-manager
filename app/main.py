@@ -4,6 +4,7 @@ from app.config_generator import ConfigGenerator
 
 app = FastAPI()
 
+# Конфигурация
 TEMPLATE_PATH = "/etc/openvpn/client-template.txt"
 CONFIG_DIR = "/etc/openvpn/client-configs"
 EASY_RSA_DIR = "/etc/openvpn/easy-rsa"
