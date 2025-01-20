@@ -9,7 +9,7 @@ class ConfigGenerator:
         self.tls_crypt_key = tls_crypt_key
 
     def generate_config(self, client_name, server_ip):
-        # Генерация ключей и сертификатов
+        # Генерация ключей и сертификато
         self._generate_certificates(client_name)
 
         # Создание конфига
