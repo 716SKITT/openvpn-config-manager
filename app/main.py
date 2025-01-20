@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from app.config_generator import ConfigGenerator
-
 app = FastAPI()
 
 # Конфигурация

@@ -11,13 +11,10 @@ COPY app/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Копируем исходный код
-COPY app .
-
-# Копируем конфиги OpenVPN
-COPY /etc/openvpn /etc/openvpn
+COPY app /app
 
 # Открываем порт для FastAPI
 EXPOSE 8000
 
 # Запускаем приложение
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
